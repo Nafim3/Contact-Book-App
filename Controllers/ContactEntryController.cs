@@ -18,5 +18,18 @@ namespace Contact_Book_App.Controllers
 
             return View(contactEntries);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(ContactEntry CEO)
+        {
+            Database.ContactEntries.Add(CEO); // Add the new contact entry to the database context
+            Database.SaveChanges(); // Save changes to the database
+            return RedirectToAction("Index");
+        }
     }
 }
