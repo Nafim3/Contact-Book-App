@@ -13,26 +13,31 @@
                         <div class ="form-group mb-3">
                             <label asp-for ="FirstName" class="form-label">First Name</label>
                             <input asp-for="FirstName" class="form-control" placeholder="Enter your first name here"/>
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
                         </div>
 
                         <div class="form-group mb-3">
                             <label asp-for="LastName" class="form-label">Last Name</label>
-                            <input asp-for="LastName" class="form-control" placeholder="Enter your surname here" />
+                            <input asp-for="LastName" class="form-control" placeholder="Enter your surname here"/>
+                            <span asp-validation-for="LastName" class="text-danger"></span>
                         </div>
 
                         <div class="form-group mb-3">
                             <label asp-for="PhoneNumber" class="form-label">Phone Number</label>
                             <input asp-for="PhoneNumber" class="form-control" placeholder="Enter your phone number here" />
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                         </div>
 
                         <div class="form-group mb-3">
                             <label asp-for="Email" class="form-label">Email</label>
                             <input asp-for="Email" class="form-control" placeholder="Enter your email here" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
 
                         <div class="form-group mb-3">
                             <label asp-for="Generated" class="form-label">Date</label>
                             <input asp-for="Generated" class="form-control" type ="date" />
+                            <span asp-validation-for="Generated" class="text-danger"></span>
                         </div>
 
                         <div class="d-flex justify-content-between">
@@ -52,4 +57,9 @@
     </div>
 </div>
 
+@section Scripts {
+
+    <partial name="_ValidationScriptsPartial" />
+
+}
  
